@@ -8,6 +8,7 @@ export const siteConfig = {
     email: "lilsh2023@shanghaitech.edu.cn",
     github: "https://github.com/LeslieTheMagicStone",
     bilibili: "https://space.bilibili.com/205225986",
+    itch: "https://lesliethemagicstone.itch.io/",
   },
 
   aboutMe:
