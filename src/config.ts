@@ -1,91 +1,86 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Leshi Li",
+  title: "Computer Science Student @ ShanghaiTech University",
+  description: "Portfolio of Leshi Li – Gameplay Programming & AI-driven 3D Generation",
   accentColor: "#1d4ed8",
+
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "lilsh2023@shanghaitech.edu.cn",
+    github: "https://github.com/LeslieTheMagicStone",
+    bilibili: "https://space.bilibili.com/205225986",
   },
+
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "I am a Computer Science undergraduate at ShanghaiTech University interested in gameplay programming, multiplayer systems, and AI-driven 3D generation. I enjoy building interactive systems that combine technical depth with creative design, especially in games and virtual environments.",
+
+  skills: [
+    "C++",
+    "C#",
+    "C",
+    "Python",
+    "Unity",
+    "Gameplay Programming",
+    "Multiplayer Systems",
+    "Git",
+    "Blender"
+  ],
+
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Mana Mingle",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Multiplayer spell-combat prototype developed in Unity. Designed a modular spell architecture using an abstract SpellBase system and ScriptableObjects, enabling rapid extension of new spells. Implemented projectile mechanics, combat interactions, and multiplayer gameplay prototyping.",
+      link: "https://github.com/LeslieTheMagicStone",
+      skills: ["Unity", "C#", "Gameplay Programming", "Multiplayer"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "AI 3D Scene Generation",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Independent research project at MARS Lab exploring scene-level 3D generation guided by large language models. Extended object-level generation models toward structured scene synthesis and layout generation.",
+      link: "https://github.com/LeslieTheMagicStone",
+      skills: ["Python", "PyTorch", "3D Generation", "LLM"],
     },
   ],
+
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Multi-disciplinary Artificial Reality Studio (MARS)",
+      title: "Independent Researcher",
+      dateRange: "Sep 2024 - Apr 2025",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Explored scene-level 3D generation driven by large language models",
+        "Investigated structured scene synthesis and layout planning for virtual environments",
+        "Prototyped research ideas for AI-assisted 3D content generation",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "ShanghaiTech University 4DVLab",
+      title: "Research Assistant",
+      dateRange: "Feb 2024 - Aug 2024",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+        "Contributed to baseline implementation for human-centric point cloud understanding",
+        "Participated in model training, evaluation, and experimental design",
+        "Assisted in data preprocessing and model performance analysis",
       ],
     },
   ],
+
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "ShanghaiTech University",
+      degree: "B.Eng. in Computer Science",
+      dateRange: "Sep 2023 - Jun 2027 (Expected)",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+        "School of Information Science and Technology",
+        "Relevant Coursework: Data Structures, Operating Systems, Computer Architecture, Parallel Computing, Unity Game Development",
       ],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
+      school: "University of California, Berkeley",
+      degree: "Visiting Student",
+      dateRange: "Fall 2025",
       achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
+        "Coursework: Computer Security, Introduction to Artificial Intelligence, Programming Languages & Compilers, Computer Vision & Computational Photography",
       ],
     },
   ],
