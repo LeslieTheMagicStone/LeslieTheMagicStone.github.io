@@ -8,5 +8,4 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://lesliethemagicstone.github.io',
-  base: '
 });
