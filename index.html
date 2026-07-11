@@ -197,16 +197,11 @@
     .project-entry {
       padding: 2.5rem 0;
       border-bottom: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 2.5rem;
-      align-items: start;
       transition: border-color 400ms ease;
     }
 
     .project-entry:first-child { padding-top: 0; }
     .project-entry:hover { border-bottom-color: var(--ink-faint); }
-    .project-entry.no-image { grid-template-columns: 1fr; }
 
     .project-title {
       font-family: var(--serif);
@@ -247,7 +242,8 @@
     }
 
     .project-link {
-      display: inline-block;
+      display: block;
+      width: fit-content;
       margin-top: 0.6rem;
       font-family: var(--sans);
       font-size: 0.82rem;
@@ -257,12 +253,20 @@
       transition: opacity 400ms ease;
     }
     .project-link:hover { opacity: 0.65; }
+    .project-link + .project-link { margin-top: 0.35rem; }
 
-    /* ── Placeholder Images ─────────────────────────────────────── */
+    /* ── Project Images ─────────────────────────────────────── */
     .project-thumb {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      max-width: 32rem;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1.5rem;
       background-color: var(--placeholder);
+    }
+    /* Div placeholder (used when there's no real image) */
+    div.project-thumb {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -393,13 +397,11 @@
       }
       .hero .section-inner { max-width: var(--measure); }
       .project-entry {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
+        padding: 2rem 0;
       }
-      .project-entry.no-image { grid-template-columns: 1fr; }
       .project-thumb {
-        aspect-ratio: 16 / 5;
-        max-height: 130px;
+        max-width: 100%;
+        margin-bottom: 1.25rem;
       }
       .hero {
         padding-top: 9rem;
@@ -486,64 +488,8 @@
             </div>
           </li>
 
-          <li class="project-entry no-image">
-            <div class="project-text">
-              <h3 class="project-title">Mana Mingle</h3>
-              <p class="project-desc">
-                Multiplayer spell-combat prototype in Unity. Modular spell
-                architecture separating Spell, Projectile, and Damage systems
-                via ScriptableObjects. Component-based combat interactions with
-                a mana resource system, built on Unity Netcode for GameObjects.
-              </p>
-              <ul class="project-tags">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Gameplay Systems</li>
-                <li>Multiplayer</li>
-              </ul>
-              <a href="https://www.bilibili.com/video/BV16t8ceBEbo" class="project-link" target="_blank" rel="noopener">Bilibili 演示 →</a>
-            </div>
-          </li>
-
-          <li class="project-entry no-image">
-            <div class="project-text">
-              <h3 class="project-title">Rising Ground</h3>
-              <p class="project-desc">
-                Physics-based platformer with destructible terrain and bomb
-                mechanics. Grid-based terrain system generating 1000+
-                destroyable cubes, explosion force simulation, two bomb types,
-                real-time trajectory prediction, and camera occlusion handling.
-              </p>
-              <ul class="project-tags">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Physics Simulation</li>
-                <li>Destructible Terrain</li>
-              </ul>
-              <a href="https://www.bilibili.com/video/BV1458ce7EHh" class="project-link" target="_blank" rel="noopener">Bilibili 演示 →</a>
-            </div>
-          </li>
-
-          <li class="project-entry no-image">
-            <div class="project-text">
-              <h3 class="project-title">Exit Code: 1</h3>
-              <p class="project-desc">
-                Global Game Jam 2026 entry. Hybrid visual novel dialogue system
-                combined with hacking mini-games. Implemented dialogue interaction,
-                stealth-based surveillance mechanics, puzzle progression logic,
-                and integrated prefab-based art assets and UI.
-              </p>
-              <ul class="project-tags">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Gameplay Programming</li>
-                <li>Game Jam</li>
-              </ul>
-              <a href="https://globalgamejam.org/games/2026/exit-code1yichangtuichu-0" class="project-link" target="_blank" rel="noopener">Global Game Jam 页面 →</a>
-            </div>
-          </li>
-
-          <li class="project-entry no-image">
+          <li class="project-entry has-image">
+            <img class="project-thumb" src="images/unmoored.png" alt="Unmoored gameplay">
             <div class="project-text">
               <h3 class="project-title">Unmoored</h3>
               <p class="project-desc">
@@ -564,6 +510,68 @@
                 <li>Physics Gameplay</li>
                 <li>Game Jam</li>
               </ul>
+              <a href="https://www.bilibili.com/video/BV1fNN46HEhb" class="project-link" target="_blank" rel="noopener">Bilibili 演示 →</a>
+              <a href="https://github.com/LeslieTheMagicStone/unmoored" class="project-link" target="_blank" rel="noopener">GitHub 仓库 →</a>
+            </div>
+          </li>
+
+          <li class="project-entry no-image">
+            <div class="project-text">
+              <h3 class="project-title">Mana Mingle</h3>
+              <p class="project-desc">
+                Multiplayer spell-combat prototype in Unity. Modular spell
+                architecture separating Spell, Projectile, and Damage systems
+                via ScriptableObjects. Component-based combat interactions with
+                a mana resource system, built on Unity Netcode for GameObjects.
+              </p>
+              <ul class="project-tags">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Gameplay Systems</li>
+                <li>Multiplayer</li>
+              </ul>
+              <a href="https://www.bilibili.com/video/BV16t8ceBEbo" class="project-link" target="_blank" rel="noopener">Bilibili 演示 →</a>
+              <a href="https://github.com/LeslieTheMagicStone/mana-mingle" class="project-link" target="_blank" rel="noopener">GitHub 仓库 →</a>
+            </div>
+          </li>
+
+          <li class="project-entry no-image">
+            <div class="project-text">
+              <h3 class="project-title">Rising Ground</h3>
+              <p class="project-desc">
+                Physics-based platformer with destructible terrain and bomb
+                mechanics. Grid-based terrain system generating 1000+
+                destroyable cubes, explosion force simulation, two bomb types,
+                real-time trajectory prediction, and camera occlusion handling.
+              </p>
+              <ul class="project-tags">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Physics Simulation</li>
+                <li>Destructible Terrain</li>
+              </ul>
+              <a href="https://www.bilibili.com/video/BV1458ce7EHh" class="project-link" target="_blank" rel="noopener">Bilibili 演示 →</a>
+              <a href="https://github.com/LeslieTheMagicStone/rising-ground" class="project-link" target="_blank" rel="noopener">GitHub 仓库 →</a>
+            </div>
+          </li>
+
+          <li class="project-entry has-image">
+            <img class="project-thumb" src="images/exitcode1.webp" alt="Exit Code: 1 gameplay">
+            <div class="project-text">
+              <h3 class="project-title">Exit Code: 1</h3>
+              <p class="project-desc">
+                Global Game Jam 2026 entry. Hybrid visual novel dialogue system
+                combined with hacking mini-games. Implemented dialogue interaction,
+                stealth-based surveillance mechanics, puzzle progression logic,
+                and integrated prefab-based art assets and UI.
+              </p>
+              <ul class="project-tags">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Gameplay Programming</li>
+                <li>Game Jam</li>
+              </ul>
+              <a href="https://globalgamejam.org/games/2026/exit-code1yichangtuichu-0" class="project-link" target="_blank" rel="noopener">Global Game Jam 页面 →</a>
             </div>
           </li>
 
